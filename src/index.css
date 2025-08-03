@@ -1,6 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+/*
+  Define the Playfair font family.
+  All weights should be under the same font-family name.
+*/
+
+@font-face {
+  font-family: 'Playfair Display'; /* A single, consistent name */
+  src: url("../src/assets/font/PlayfairDisplay-Regular.ttf");
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../src/assets/font/PlayfairDisplay-Medium.ttf");
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../src/assets/font/PlayfairDisplay-ExtraBold.ttf");
+  font-weight: 800; /* Extra Bold weight */
+  font-style: normal;
+}
+
+/*
+  Import TailwindCSS after the font definitions.
+*/
 @import "tailwindcss";
+
+/*
+  Extend the Tailwind theme to create a single utility class
+  that uses the font family name.
+*/
+@theme {
+  --font-playfair: 'Playfair Display';
+}
+
+
+@import "tailwindcss";
+
+
+
+
+@keyframes fadeInWhite {
+  0% {
+    color: #27272a;
+    transform: translateY(10%);
+    opacity: 0.2;
+  }
+  100% {
+    color: white;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutZinc {
+  0% {
+    color: white;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    color: #27272a;
+    transform: translateY(10%);
+    opacity: 0.2;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
 .font-cred {
   font-family: 'Space Grotesk', sans-serif;
+
 }
+
+.text-fade-in {
+  animation: fadeInWhite 0.6s ease forwards;
+}
+
+.text-fade-out {
+  animation: fadeOutZinc 0.6s ease forwards;
+}
+
+
