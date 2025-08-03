@@ -1,3 +1,4 @@
+
 /*
   Define the Playfair font family.
   All weights should be under the same font-family name.
@@ -67,6 +68,12 @@
     transform: translateY(10%);
     opacity: 0.2;
   }
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+.font-cred {
+  font-family: 'Space Grotesk', sans-serif;
+
 }
 
 .text-fade-in {
