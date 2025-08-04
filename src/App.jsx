@@ -7,6 +7,10 @@ import { BrowserRouter,Routes,Route  } from 'react-router-dom'
 import { Landing } from './pages/Landing'
 import { Paragraph } from './pages/Paragraph'
 import { Iphone } from './pages/Iphone'
+import { FloatingCards } from './pages/FloatingCards'
+import { CreditCards } from './pages/CreditCards'
+import { Balls } from './pages/Balls'
+import { Torch } from './pages/Torch'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -21,7 +25,11 @@ export default function App() {
       <div className=''>
       <Landing></Landing>
          <Paragraph/>
-         <Iphone/>    
+         <Iphone/> 
+         <FloatingCards/>
+         <CreditCards/>
+         <Balls/>
+         <Torch/>   
       </div>
        <div className="p-4">
       <Menu />

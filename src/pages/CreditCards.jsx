@@ -65,7 +65,8 @@ const CardComponent = ({ bgimg, tagimg }) => {
 export const CreditCards = () => {
   return (
     <div className="relative min-h-[150vh] bg-black w-screen text-white px-4 py-16">
-      <div className="absolute top-1 left-0 w-full h-[1px] bg-gradient-to-r from-black via-neutral-600 to-black"></div>
+      
+      <div className="absolute top-[1%] left-0 w-full h-[1px] bg-gradient-to-r from-black via-neutral-600 to-black"></div>
       <div className="text-7xl font-playfair font-extrabold mb-[5%] mt-[13%] ml-[3%]">
         upgrade your life. <br /> bit by bit
       </div>
