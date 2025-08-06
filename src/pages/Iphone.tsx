@@ -1,7 +1,7 @@
 
 export const Iphone = () => {
     return (
-        <div className="h-[150vh] w-screen overflow-hidden relative bg-black">
+        <div className="h-[150vh] w-screen overflow-hidden relative bg-black mb-10">
   {/* Top border */}
   <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neutral-700 to-transparent z-10" />
 <div className="relative">
