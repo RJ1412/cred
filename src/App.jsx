@@ -1,36 +1,27 @@
-
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { BrowserRouter,Routes,Route  } from 'react-router-dom'
-import { Landing } from './pages/Landing'
-import { Paragraph } from './pages/Paragraph'
-import { Iphone } from './pages/Iphone'
-function App() {
-  const [count, setCount] = useState(0)
-
-import Menu from "./page/Menu";
-
-
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Landing } from './pages/Landing';
+import { Paragraph } from './pages/Paragraph';
+import { Iphone } from './pages/Iphone';
+Card// import { Menu } from './pages/Landing'; // ✅ Use only the correct import
+import './App.css';
+import { Card } from './pages/Card';
 
 export default function App() {
   return (
-
     <>
-      <div className=''>
-      <Landing></Landing>
-         <Paragraph/>
-         <Iphone/>    
-      </div>
-       <div className="p-4">
-      <Menu />
-      {/* Other content */}
-    </div>
-   </>
-  );
-
-   
  
-
+        
+        {/* Other content */}
+      
+      <div className="bg-black">
+        
+        <Landing />
+        <Paragraph />
+        <Iphone />
+       <Card />
+      </div>
+       
+    </>
+  );
 }
