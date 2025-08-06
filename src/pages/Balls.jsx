@@ -3,7 +3,7 @@
 export const Balls = () => {
     return (
         <>
-        <div className="relative h-[100vh] w-screen bg-black text-white">
+        <div className="relative h-[100vh] w-screen bg-black text-white ">
     <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-black via-neutral-600 to-black"></div>
     <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-black via-neutral-600 to-black"></div>
     <video

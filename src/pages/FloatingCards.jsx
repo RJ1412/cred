@@ -2,7 +2,7 @@
 export const FloatingCards = () => {
     return (
       <>
-      <div className="relative min-h-[55vh] w-screen bg-black ">
+      <div className="relative min-h-[55vh] w-screen bg-black">
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-black via-neutral-600 to-black"></div>
         
         <div className=" grid grid-cols-3">
