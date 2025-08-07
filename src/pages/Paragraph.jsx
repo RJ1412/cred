@@ -40,7 +40,7 @@ export const Paragraph = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative min-h-[220vh] w-full bg-black flex items-center justify-center py-24">
+    <div ref={containerRef} className="relative min-h-[220vh]  w-screen bg-black flex items-center justify-center py-24">
       <div className="w-[50vw] max-w-5xl">
         
         

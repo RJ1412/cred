@@ -12,24 +12,30 @@ import { FloatingCards } from './pages/FloatingCards'
 import { CreditCards } from './pages/CreditCards'
 import { Balls } from './pages/Balls'
 import { Torch } from './pages/Torch'
-
+Light
+import { Ratings } from './pages/Ratings'
+import CredFooter from './pages/CredFooter'
+import { Light } from './pages/Light'
 
 export default function App() {
   return (
     <>
 
-      <div className=''>
-      <Landing></Landing>
-         <Paragraph/>
-         <Iphone/> 
      
-      <div className="bg-black">
-       <Card />
-      </div>
-         <FloatingCards/>
+     
+      <div className="bg-black w-screen">
+        <Landing/>
+         <Paragraph/>
+        <Iphone/> 
+       <FloatingCards/>
+     
+         
          <CreditCards/>
          <Balls/>
          <Torch/>   
+          <Ratings/>
+          <Light/>
+          <CredFooter/>
         
         {/* Other content */}
      
