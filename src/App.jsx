@@ -14,8 +14,9 @@ import { Balls } from './pages/Balls'
 import { Torch } from './pages/Torch'
 Light
 import { Ratings } from './pages/Ratings'
-import CredFooter from './pages/CredFooter'
+import {CredFooter} from './pages/CredFooter'
 import { Light } from './pages/Light'
+import { FAQ } from './pages/FAQ'
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
          <Torch/>   
           <Ratings/>
           <Light/>
+          <FAQ/>
           <CredFooter/>
         
         {/* Other content */}

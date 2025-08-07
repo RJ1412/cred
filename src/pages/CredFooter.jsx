@@ -1,144 +1,229 @@
-import React from "react";
-
-const CredFooter = () => {
+import React from 'react';
+export function CredFooter() {
   return (
-    <footer className="bg-black text-white font-sans px-8 md:px-20 pt-20 pb-10">
-      <div className="max-w-screen-xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start">
-          {/* Left Logo */}
-          <div className="mb-10 md:mb-0">
-            <img
-              src="/cred-logo.svg"
-              alt="CRED Logo"
-              className="h-16 w-auto mb-4"
-            />
+    <div className="bg-[#0f0f0f] text-white font-sans pt-20 pb-20 px-4">
+      <div className="max-w-[1440px] mx-auto flex flex-col gap-12">
+        
+        {/* Top Row: Logo and Banner */}
+        <div className="flex justify-between">
+          <div className="w-[280px]">
+            <CredLogo />
           </div>
-
-          {/* Banner */}
-          <div className="mb-10 md:mb-0">
-            <div className="relative">
-              <img
-                src="/banner.jpg"
-                alt="Banner"
-                className="w-[500px] h-auto object-cover rounded"
-              />
-              <div className="absolute top-[-10px] left-[-10px] bg-black text-white text-xs font-semibold px-3 py-1 tracking-widest">
-                NOW LIVE
-              </div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 text-sm tracking-wide text-white">
-                <span className="mr-2">THE</span>
-                <span className="border border-white px-3 py-1 rounded-full">SVALBARD 2025</span>
-                <span className="ml-2">RELEASE</span>
-              </div>
-            </div>
+          <div className="w-[640px]">
+            <LaunchBanner />
           </div>
         </div>
 
-        {/* Footer Links */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mt-16 text-sm text-gray-400">
-          {/* Column 1 */}
-          <div>
-            <h4 className="text-white text-sm font-semibold tracking-widest mb-4">UPGRADES</h4>
-            <ul className="space-y-2">
-              <li>CRED money</li>
-              <li>CRED mint</li>
-              <li>CRED garage</li>
-              <li>CRED escapes</li>
-            </ul>
-
-            <h4 className="text-white text-sm font-semibold tracking-widest mt-8 mb-4">PAYMENTS</h4>
-            <ul className="space-y-2">
-              <li>Scan & Pay</li>
-              <li>Tap to Pay</li>
-              <li>Pay anyone</li>
-              <li>RuPay cards on UPI</li>
-            </ul>
+        {/* Bottom Row: SecurityNote + Footer aligned horizontally */}
+        <div className="flex justify-between items-end"> {/* <-- this line changed */}
+          <div className="w-[280px]">
+            <SecurityNote />
           </div>
-
-          {/* Column 2 */}
-          <div>
-            <h4 className="text-white text-sm font-semibold tracking-widest mb-4">COMPANY</h4>
-            <ul className="space-y-2">
-              <li>about CRED</li>
-              <li>careers</li>
-            </ul>
-
-            <h4 className="text-white text-sm font-semibold tracking-widest mt-8 mb-4">INSIDER PERKS</h4>
-            <ul className="space-y-2">
-              <li>upgrade to UPI</li>
-            </ul>
-
-            <h4 className="text-white text-sm font-semibold tracking-widest mt-8 mb-4">DESIGN</h4>
-            <ul className="space-y-2">
-              <li>NeoPOP</li>
-              <li>manifesto</li>
-            </ul>
-          </div>
-
-          {/* Column 3 */}
-          <div>
-            <h4 className="text-white text-sm font-semibold tracking-widest mb-4">RESOURCES</h4>
-            <ul className="space-y-2">
-              <li>partner with us</li>
-              <li>calculators</li>
-              <li>articles</li>
-              <li>tech blog</li>
-              <li>credit score guide</li>
-              <li>credit card payment</li>
-              <li>guide</li>
-              <li>customer care</li>
-              <li>Dreampurse (HipBar)</li>
-              <li>wallet refund form</li>
-            </ul>
-          </div>
-
-          {/* Column 4 */}
-          <div>
-            <h4 className="text-white text-sm font-semibold tracking-widest mb-4">POLICY</h4>
-            <ul className="space-y-2">
-              <li>transaction & user</li>
-              <li>verification</li>
-              <li>Google API</li>
-              <li>disclosure</li>
-              <li>UPI FAQ &</li>
-              <li>grievances</li>
-              <li>returns and refunds</li>
-              <li>security</li>
-              <li>equal opportunity</li>
-              <li>policy</li>
-              <li>investor relations</li>
-              <li>other disclosures</li>
-            </ul>
+          <div className="w-[640px]">
+            <Footer />
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="mt-16 border-t border-gray-800 pt-10 text-sm text-gray-400">
-          <div className="mb-6">
-            <img
-              src="/security-logos.png"
-              alt="Security Logos"
-              className="h-10 mb-4"
-            />
-            <p className="text-white font-semibold text-lg">complete security. no asterisks.</p>
-            <p className="mt-2">
-              CRED encrypts all data and transactions to ensure a completely secure
-              experience for our members.
-            </p>
-          </div>
-
-          <div className="flex justify-between items-center flex-wrap text-xs text-gray-500">
-            <p>copyright © 2020-24 Dreamplug Technologies Pvt Ltd.</p>
-            <div className="space-x-4">
-              <a href="#">privacy policy</a>
-              <span>|</span>
-              <a href="#">terms and conditions</a>
-            </div>
-          </div>
-        </div>
       </div>
-    </footer>
+      <div className="border-t mt-10 mb-10 border-white/10 pt-6 md:pt-10 px-4 max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center text-white/40 text-sm gap-2 md:gap-4">
+  <span className="text-center md:text-left">© 2020–24 Dreamplug Technologies Pvt Ltd.</span>
+  <div className="flex gap-2 md:gap-4 text-center md:text-right">
+    <a href="#" className="hover:text-white">Privacy Policy</a>
+    <span>|</span>
+    <a href="#" className="hover:text-white">Terms and Conditions</a>
+  </div>
+</div>
+
+      
+    </div>
+  );
+}
+
+
+
+const LaunchBanner = () => {
+  const imageUrl =
+    'https://web-images.credcdn.in/v2/_next/assets/images/launch-banners/cards/now-live-wide.png?tr=q-95';
+
+  return (
+    <div className="w-full rounded-xl overflow-hidden">
+      <img
+        src={imageUrl}
+        alt="Banner"
+        className="w-full h-auto block"
+        onError={(e) => {
+          e.currentTarget.onerror = null;
+          e.currentTarget.src =
+            'https://placehold.co/640x320/000000/FFFFFF?text=Image+Not+Found';
+        }}
+      />
+    </div>
   );
 };
 
-export default CredFooter;
+
+const CredLogo = () => {
+    return (
+        <>
+         <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="74"
+        height="88"
+        viewBox="0 0 74 88"
+        fill="none"
+        class="w-15 h-auto"
+      >
+        <path
+          d="M36.9957 57.4618C36.6778 57.4628 36.3652 57.3812 36.0889 57.225L12.5222 44.0271C12.2371 43.8671 11.9999 43.6345 11.835 43.3533C11.6701 43.072 11.5834 42.7521 11.5839 42.4266V1.83446C11.5839 1.34793 11.7783 0.88133 12.1243 0.537302C12.4703 0.193273 12.9396 0 13.429 0H60.5595C61.0489 0 61.5182 0.193273 61.8642 0.537302C62.2102 0.88133 62.4046 1.34793 62.4046 1.83446V42.4266C62.4051 42.7521 62.3184 43.072 62.1535 43.3533C61.9887 43.6345 61.7514 43.8671 61.4663 44.0271L37.8996 57.225C37.6242 57.3808 37.3126 57.4624 36.9957 57.4618ZM15.274 41.3681L36.9957 53.5332L58.7145 41.3681V3.66892H15.274V41.3681Z"
+          fill="white"
+        />
+        <path
+          d="M36.9957 39.0858C36.678 39.0854 36.3658 39.0038 36.0889 38.849L28.6284 34.6665C28.3433 34.5069 28.106 34.2749 27.9406 33.9942C27.7752 33.7135 27.6878 33.3941 27.6872 33.0688V25.3915H31.3773V32.0132L36.9986 35.1515L43.5552 31.4769L45.3658 34.6722L37.9053 38.8547C37.6271 39.0081 37.3138 39.0877 36.9957 39.0858Z"
+          fill="white"
+        />
+        <path
+          d="M36.9957 48.2752C36.678 48.2748 36.3658 48.1933 36.0889 48.0384L20.5739 39.3482C20.2891 39.1885 20.0522 38.9563 19.8873 38.6756C19.7225 38.3949 19.6356 38.0756 19.6356 37.7506V17.8425C19.6356 17.356 19.83 16.8894 20.176 16.5453C20.522 16.2013 20.9913 16.008 21.4806 16.008H44.2668V19.6855H23.3199V36.6864L36.99 44.3438L50.6571 36.6864V28.7323H54.3472V37.7506C54.3472 38.0756 54.2603 38.3949 54.0954 38.6756C53.9306 38.9563 53.6936 39.1885 53.4089 39.3482L37.8938 48.0384C37.6196 48.192 37.3104 48.2735 36.9957 48.2752Z"
+          fill="white"
+        />
+        <path
+          d="M54.3529 21.7197H50.6628V11.6744H26.1664V8.00545H52.5108C53.0001 8.00545 53.4694 8.19872 53.8154 8.54275C54.1614 8.88678 54.3558 9.35338 54.3558 9.83991L54.3529 21.7197Z"
+          fill="white"
+        />
+        <path
+          d="M0 78.5624C0 73.2244 3.97991 69.1304 9.46915 69.1304C11.0224 69.1067 12.5559 69.4796 13.9228 70.2134C15.2898 70.9471 16.4446 72.0173 17.2769 73.3214L13.6872 75.4013C12.8809 74.0005 11.3199 73.1731 9.47202 73.1731C6.2439 73.1731 4.16356 75.3242 4.16356 78.5624C4.16356 81.8005 6.2439 83.9516 9.47202 83.9516C11.3199 83.9516 12.9153 83.1243 13.6872 81.7235L17.2769 83.7976C15.7159 86.3652 12.8034 87.9943 9.47202 87.9943C3.97991 87.9943 0 83.9003 0 78.5624Z"
+          fill="white"
+        />
+        <path
+          d="M53.1248 83.9174V87.9515H40.8264V69.1219H53.1248V73.156H45.1478V76.3827H52.1693V80.4681H45.1478V83.9088L53.1248 83.9174Z"
+          fill="white"
+        />
+        <path
+          d="M32.5997 81.0673C33.63 80.5632 34.5007 79.7866 35.1162 78.8229C35.7317 77.8591 36.0683 76.7453 36.0889 75.6038C36.092 74.7546 35.9262 73.9131 35.601 73.1278C35.2759 72.3425 34.7979 71.6288 34.1945 71.0278C33.591 70.4268 32.8741 69.9502 32.0848 69.6256C31.2956 69.301 30.4495 69.1346 29.5954 69.1361H22.0201V88H26.3472V81.7948H28.4075L31.9799 87.9943H36.6341L32.5997 81.0673ZM29.5954 78.0231H26.3472V73.1731H29.5954C30.7862 73.1731 31.759 74.223 31.759 75.5981C31.759 76.9733 30.7862 78.0231 29.5954 78.0231Z"
+          fill="white"
+        />
+        <path
+          d="M64.8178 69.1304H57.8594V87.9315H64.8178C70.0229 87.9315 74 83.8489 74 78.531C74 73.213 70.0143 69.1304 64.8178 69.1304ZM64.8178 83.9174H62.175V73.1674H64.8063C67.7733 73.1674 69.8221 75.31 69.8221 78.5338C69.8221 81.7577 67.7848 83.9174 64.8178 83.9174Z"
+          fill="white"
+        />
+      </svg>
+        </>
+    )
+}
+const FooterColumn = ({ title, links }) => (
+  <div>
+    <h3 className="text-sm font-bold tracking-[.2em] text-white/90 mb-6">{title}</h3>
+    <ul>
+      {links.map((link, index) => (
+        <li key={index} className="mb-4">
+          <a
+            href="#"
+            className="text-base text-white/60 hover:text-white transition-colors duration-300"
+          >
+            {link}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
+const SecurityNote = () => (
+  <div className="text-white">
+    <div className="bg-white p-2 rounded-lg inline-block mb-6">
+      <img
+        src="https://web-images.credcdn.in/v2/_next/assets/images/landing/security-final-2.png"
+        alt="Security certifications"
+        className="w-full h-auto"
+      />
+    </div>
+    <p className="font-bold text-lg mb-4">complete security. no asterisks.</p>
+    <p className="text-white/60 leading-relaxed text-base">
+      CRED encrypts all data and transactions to ensure a completely secure experience for our members.
+    </p>
+  </div>
+);
+
+const Footer = () => {
+  const upgrades = {
+    title: 'UPGRADES',
+    links: ['CRED money', 'CRED mint', 'CRED garage', 'CRED escapes'],
+  };
+
+  const payments = {
+    title: 'PAYMENTS',
+    links: ['Scan & Pay', 'Tap to Pay', 'Pay anyone', 'RuPay cards on UPI'],
+  };
+
+  const company = {
+    title: 'COMPANY',
+    links: ['about CRED', 'careers'],
+  };
+
+  const insider = {
+    title: 'INSIDER PERKS',
+    links: ['upgrade to UPI'],
+  };
+
+  const design = {
+    title: 'DESIGN',
+    links: ['NeoPOP', 'manifesto'],
+  };
+
+  const resources = {
+    title: 'RESOURCES',
+    links: [
+      'partner with us',
+      'calculators',
+      'articles',
+      'tech blog',
+      'credit score guide',
+      'credit card payment',
+      'guide',
+      'customer care',
+      'Dreampurse (HipBar)',
+      'wallet refund form',
+    ],
+  };
+
+  const policy = {
+    title: 'POLICY',
+    links: [
+      'transaction & user verification',
+      'Google API',
+      'disclosure',
+      'UPI FAQ &',
+      'grievances',
+      'returns and refunds',
+      'security',
+      'equal opportunity',
+      'policy',
+      'investor relations',
+      'other disclosures',
+    ],
+  };
+
+  return (
+    <div className="grid grid-cols-3 gap-x-12 text-white">
+      {/* Column 1: UPGRADES + PAYMENTS */}
+      <div className="flex flex-col gap-12">
+        <FooterColumn title={upgrades.title} links={upgrades.links} />
+        <FooterColumn title={payments.title} links={payments.links} />
+      </div>
+
+      {/* Column 2: COMPANY + INSIDER PERKS + DESIGN */}
+      <div className="flex flex-col gap-12">
+        <FooterColumn title={company.title} links={company.links} />
+        <FooterColumn title={insider.title} links={insider.links} />
+        <FooterColumn title={design.title} links={design.links} />
+      </div>
+
+      {/* Column 3: RESOURCES + POLICY at bottom */}
+      <div className="flex flex-col justify-between h-full">
+        <FooterColumn title={resources.title} links={resources.links} />
+        <div className="mt-12">
+          <FooterColumn title={policy.title} links={policy.links} />
+        </div>
+      </div>
+    </div>
+  );
+};
