@@ -17,6 +17,7 @@ import { Ratings } from './pages/Ratings'
 import {CredFooter} from './pages/CredFooter'
 import { Light } from './pages/Light'
 import { FAQ } from './pages/FAQ'
+import { UPI } from './pages/UPI'
 
 export default function App() {
   return (
@@ -38,10 +39,12 @@ export default function App() {
           <Light/>
           <FAQ/>
           <CredFooter/>
+       
         
         {/* Other content */}
      
        </div>
+          <UPI/>
     </>
   );
 }

@@ -44,7 +44,7 @@ const CardComponent = ({ bgimg, tagimg }) => {
  <div className="mt-[4%] text-4xl font-medium font-sans">
  scan & pay <br /> any UPI QR
  </div>
- <button className="mt-[4%] border border-neutral-600 text-white w-[35%] h-[7%] text-sm font-bold px-4 py-2 flex justify-center items-center space-x-2">
+ <button className="mt-[4%] border whitespace-nowrap border-neutral-600 text-white w-[35%] h-[7%] text-sm font-bold px-4 py-2 flex justify-center items-center space-x-2">
  <div>KNOW MORE</div>
  <svg
  width="19"
