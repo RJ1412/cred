@@ -135,16 +135,7 @@
   .cred-right { padding-top: 0; }
 }
 
-:root {
-  --bg: #f0f0f0;
-  --fg: #000;
-  --fg-muted: rgba(0,0,0,0.6);
-}
 
-body {
-  margin: 0;
-  background: var(--bg);
-}
 
 .ss-section {
   height: 100vh;

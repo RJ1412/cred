@@ -2,7 +2,7 @@ import React from "react";
 
 export function RuPayUPIHero() {
   return (
-    <section className="cred-rupay-hero">
+    <section className="bg-black text-white w-screen min-h-screen flex items-center">
       <div className="cred-rupay-wrap">
         {/* LEFT: Big serif headline */}
         <div className="cred-left">

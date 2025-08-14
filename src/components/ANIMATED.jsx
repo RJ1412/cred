@@ -1,3 +1,4 @@
+                                               
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -78,99 +79,41 @@ export function AnimatedText() {
   return (
     <section
       ref={heroRef}
-      style={{
-    display: "flex",
-    alignItems: "center",
-    minHeight: "100vh",
-    backgroundColor: "#f9f9f9", // light whiteish background to match phone
-    overflow: "hidden",
-    justifyContent: "center",
-    position: "relative",
-  }}
+      className="flex items-center  w-screen bg-[#f9f9f9]  justify-center relative"
     >
-      <div
-        style={{
-      width: "100%",
-      maxWidth: "1200px",
-      position: "relative",
-      display: "flex",
-      alignItems: "center",
-    }}
-      >
+      <div className="w-full max-w-[1200px] relative flex items-center">
         {/* LEFT TEXT SECTION */}
-        <div
-          style={{
-        backgroundColor: "#f2f2f2",
-        padding: "60px",
-        borderRadius: "12px",
-        width: "70%",
-        minHeight: "52vh",
-        position: "relative",
-        zIndex: 1,
-      }}
-        >
-          <div style={{ position: "relative", minHeight: "52vh" }}>
+        <div className="bg-[#f2f2f2] p-[60px] rounded-[12px] w-[70%] min-h-[52vh] relative z-[1]">
+          <div className="relative min-h-[52vh]">
             {/* FRAME A */}
-            <div className="frame frame-a" style={{ position: "absolute", inset: 0 }}>
-              <div
-                className="h-lines"
-                style={{
-                  fontSize: "48px",
-                  fontWeight: "800",
-                  lineHeight: "1.1",
-                  marginBottom: "20px",
-                }}
-              >
-                <span className="line" style={{ display: "block" }}>scan any</span>
-                <span className="line" style={{ display: "block" }}>QR and pay.</span>
-                <span className="line" style={{ display: "block" }}>on credit.</span>
+            <div className="frame frame-a absolute inset-0">
+              <div className="h-lines text-[48px] font-extrabold leading-[1.1] mb-[20px]">
+                <span className="line block">scan any</span>
+                <span className="line block">QR and pay.</span>
+                <span className="line block">on credit.</span>
               </div>
-              <div
-                className="subcopy"
-                style={{
-                  fontSize: "18px",
-                  color: "#555",
-                  lineHeight: "1.5",
-                  maxWidth: "420px",
-                }}
-              >
-                <span className="sub-line" style={{ display: "block" }}>
+              <div className="subcopy text-[18px] text-[#555] leading-[1.5] max-w-[420px]">
+                <span className="sub-line block">
                   reach your spend milestones faster,
                 </span>
-                <span className="sub-line" style={{ display: "block" }}>
+                <span className="sub-line block">
                   and earn credit card rewards.
                 </span>
               </div>
             </div>
 
             {/* FRAME B */}
-            <div className="frame frame-b" style={{ position: "absolute", inset: 0 }}>
-              <div
-                className="h-lines"
-                style={{
-                  fontSize: "48px",
-                  fontWeight: "800",
-                  lineHeight: "1.1",
-                  marginBottom: "20px",
-                }}
-              >
-                <span className="line" style={{ display: "block" }}>pay online,</span>
-                <span className="line" style={{ display: "block" }}>without any</span>
-                <span className="line" style={{ display: "block" }}>CVV &amp; OTP</span>
+            <div className="frame frame-b absolute inset-0">
+              <div className="h-lines text-[48px] font-extrabold leading-[1.1] mb-[20px]">
+                <span className="line block">pay online,</span>
+                <span className="line block">without any</span>
+                <span className="line block">CVV &amp; OTP</span>
               </div>
-              <div
-                className="subcopy"
-                style={{
-                  fontSize: "18px",
-                  color: "#555",
-                  lineHeight: "1.5",
-                  maxWidth: "420px",
-                }}
-              >
-                <span className="sub-line" style={{ display: "block" }}>
+              <div className="subcopy text-[18px] text-[#555] leading-[1.5] max-w-[420px]">
+                <span className="sub-line block">
                   make purchases on credit
                 </span>
-                <span className="sub-line" style={{ display: "block" }}>
+                <span className="sub-line block">
                   by entering only your UPI PIN at checkout
                 </span>
               </div>
@@ -179,37 +122,24 @@ export function AnimatedText() {
         </div>
 
         {/* RIGHT VIDEO SECTION */}
-        <div   style={{
-        marginLeft: "-60px", // pull phone into card to remove gap
-        zIndex: 2,
-      }}>
-          <video 
-  loop 
-  playsInline 
-  preload="metadata" 
-  autoPlay 
-  muted 
-  poster="https://web-images.credcdn.in/v2/_next/assets/images/cc-on-upi/desktop-onboarding-01-thumbnail.png"
-  style={{
-     
-         
-          backgroundColor: "#f9f9f9", // match phone background color
-    width: "270px",
-    height: "544px",
-    borderRadius: "24px",
-    boxShadow: "0 4px 30px rgba(0,0,0,0.2)",
-    objectFit: "cover",
-    position: "initial",
-    visibility: "visible"
-  }}
->
-  <source 
-    src="https://web-images.credcdn.in/v2/_next/assets/videos/cc-on-upi/desktop-onboarding-01-video.mp4" 
-    type="video/mp4" 
-  />
-</video>
+        <div className="ml-[-60px] z-[2]">
+          <video
+            loop
+            playsInline
+            preload="metadata"
+            autoPlay
+            muted
+            poster="https://web-images.credcdn.in/v2/_next/assets/images/cc-on-upi/desktop-onboarding-01-thumbnail.png"
+            className="bg-[#f9f9f9] w-[270px] h-[544px] rounded-[24px] shadow-[0_4px_30px_rgba(0,0,0,0.2)] object-cover"
+          >
+            <source
+              src="https://web-images.credcdn.in/v2/_next/assets/videos/cc-on-upi/desktop-onboarding-01-video.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
       </div>
     </section>
   );
 }
+          

@@ -51,7 +51,7 @@ const CredLogo = () => {
 
 export function First() {
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-screen h-screen overflow-hidden bg-black">
       {/* Background video */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
