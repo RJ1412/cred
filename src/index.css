@@ -1,4 +1,29 @@
+
+/* Declare your custom font */
+@font-face {
+  font-family: PJS400 ; /* Give your font a name */
+  src: url('../src/assets/font/Swear-Display-Bold.otf') format('opentype')
+
+}
+
+@font-face {
+  font-family: PJS401 ; /* Give your font a name */
+  src: url('../src/assets/font/PlayfairDisplay-Regular.ttf') format('opentype')
+}
+
+@font-face {
+  font-family: PJS402 ; /* Give your font a name */
+  src: url('../src/assets/font/Swear-Display-Thin-Italic.otf') format('opentype')
+}
+
+@theme {
+  --font-swear : PJS400 ;
+  --font-swear-regular : PJS401;
+  --font-swear-thin : PJS402
+}
+
 @import "tailwindcss";
+
 
 @font-face {
   font-family: 'Cirka';
@@ -177,3 +202,4 @@
   font-size: clamp(18px, 2.4vw, 28px);
   color: var(--fg-muted);
 }
+
