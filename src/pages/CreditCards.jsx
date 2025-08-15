@@ -77,6 +77,7 @@ export const CreditCards = () => {
   const navigate = useNavigate(); // React Router navigation hook
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const swiperElement = swiperAreaRef.current;
     if (swiperElement && swiperInstance) {
       const SCROLL_DELAY = 600;
@@ -137,8 +138,18 @@ export const CreditCards = () => {
                 bgimg={item.backgroundImage}
                 tagimg={item.tagimg}
                 onKnowMore={() => {
+                  if (index === 0) {
+                    const newTab = window.open('/cred-pay', '_blank');
+                    if (newTab) {
+                      newTab.scrollTo(0, 0); // Ensure it starts at top
+                    }
+                    // Redirect to Cred Pay page
+                  }
                   if (index === 1) {
-                    navigate('/upi-credit'); // Redirect to another page
+                    const newTab = window.open('/upi-credit', '_blank');
+                    if (newTab) {
+                      newTab.scrollTo(0, 0);
+                    }
                   }
                 }}
               />

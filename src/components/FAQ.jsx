@@ -43,9 +43,24 @@ do not share your card details with anyone and ensure that you monitor your cred
     {
       q: "how can i get a RuPay credit card if i don't have one?",
       a: (
-        <p>
-          you've earned some insider scoop: we're partnering with the country's leading banks to help you get instant access to RuPay credit cards. until then, you can apply for eligible RuPay credit card via your preferred bank. or you can find one for yourself by visiting <a href="https://www.rupay.co.in" target="_blank" style="color: rgb(255, 255, 255); opacity: 0.9; text-decoration: underline;">rupay.co.in</a>
-        </p>
+        <>
+  <p>
+    you've earned some insider scoop: we're partnering with the country's leading banks to help you get instant access to RuPay credit cards. until then, you can apply for eligible RuPay credit card via your preferred bank. or you can find one for yourself by visiting{" "}
+    <a
+      href="https://www.rupay.co.in"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        color: "rgb(255, 255, 255)",
+        opacity: 0.9,
+        textDecoration: "underline",
+      }}
+    >
+      rupay.co.in
+    </a>
+  </p>
+</>
+
       ),
     },
     {

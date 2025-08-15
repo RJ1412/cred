@@ -11,6 +11,7 @@ import { CredFooter } from './pages/CredFooter';
 import { Light } from './pages/Light';
 import { FAQ } from './pages/FAQ';
 import { UPI } from './pages/UPI';
+import { CredPay } from './pages/CredPay';
 
 export default function App() {
   return (
@@ -39,6 +40,7 @@ export default function App() {
 
       {/* UPI Page Route */}
       <Route path="/upi-credit" element={<UPI />} />
+      <Route path="/cred-pay" element={<CredPay />} />
     </Routes>
   );
 }
